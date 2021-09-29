@@ -44,7 +44,7 @@
 
 ## ♢ How to make your own :
 
-Either you could locally host or deploy on [Heroku](https://heroku.com)
+Either you could locally host or deploy on [Heroku](https://heroku.com/deploy?template=https://github.com/techiesneh/SnehFilesStream/tree/main)
 
 <br>
 
@@ -62,7 +62,7 @@ Either you could locally host or deploy on [Heroku](https://heroku.com)
 
 Press the below button to Fast deploy on Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/techiesneh/SnehFilesStream/tree/main)
 
 then goto the <a href="#mandatory-vars">variables tab</a> for more info on setting up environmental variables. </details>
 
@@ -72,8 +72,8 @@ then goto the <a href="#mandatory-vars">variables tab</a> for more info on setti
 
 
 ```py
-git clone https://github.com/techiesneh/SnehStreamBot
-cd SnehStreamBot
+git clone https://github.com/techiesneh/SnehFilesStream
+cd SnehFilesStream
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
