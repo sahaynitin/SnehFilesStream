@@ -147,19 +147,17 @@ To get an instant stream link, just forward any media to the bot and boom, its f
 Bot also Supported with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with **Get Download Link** Button. </details>
 
 
-- [Techie Sneh](https://telegram.me/techiesneh)
-
 
 ## 📷 Some Screenshots :
 <hr>
 
 <div>
-<img src="bot_ss1.jpg" alt="Bot 1" width="140" height="300">
-<img src="bot_ss2.jpg" alt="Bot 2" width="140" height="300"><br>
-<img src="bot_ss3.jpg" alt="Bot 3" width="140" height="300">
-<img src="bot_ss4.jpg" alt="Bot 4" width="140" height="300"><br>
-<img src="bot_ss5.jpg" alt="Bot 5" width="140" height="300">
-<img src="bot_ss6.jpg" alt="Bot 5" width="140" height="300">
+<img src="images/bot_ss1.jpg" alt="Bot 1" width="140" height="300">
+<img src="images/bot_ss2.jpg" alt="Bot 2" width="140" height="300"><br>
+<img src="images/bot_ss3.jpg" alt="Bot 3" width="140" height="300">
+<img src="images/bot_ss4.jpg" alt="Bot 4" width="140" height="300"><br>
+<img src="images/bot_ss5.jpg" alt="Bot 5" width="140" height="300">
+<img src="images/bot_ss6.jpg" alt="Bot 5" width="140" height="300">
 
 </div> 
 
