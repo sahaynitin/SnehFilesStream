@@ -1,8 +1,8 @@
 # (c) Code-x-Mania
-from Code_X_Mania.vars import Var
-from Code_X_Mania.bot import StreamBot
-from Code_X_Mania.utils.custom_dl import TGCustomYield
-from Code_X_Mania.utils.file_size import human_size
+from WebStreamer import Var
+from WebStreamer.bot import StreamBot
+from WebStreamer.utils.custom_dl import TGCustomYield
+from WebStreamer.utils.file_size import human_size
 import urllib.parse
 import secrets
 import mimetypes
@@ -26,17 +26,17 @@ async def render_page(message_id):
     audio_formats = ['audio/mpeg', 'audio/mp4', 'audio/x-mpegurl', 'audio/vnd.wav']
     video_formats = ['video/mp4', 'video/avi', 'video/ogg', 'video/h264', 'video/h265', 'video/x-matroska']
     if mime_type.lower() in video_formats:
-        async with aiofiles.open('Code_X_Mania/template/req.html') as r:
+        async with aiofiles.open('WebStreamer/template/req.html') as r:
             heading = 'Watch {}'.format(file_name)
             tag = mime_type.split('/')[0].strip()
             html = (await r.read()).replace('tag', tag) % (heading, file_name, src)
     elif mime_type.lower() in audio_formats:
-        async with aiofiles.open('Code_X_Mania/template/req.html') as r:
+        async with aiofiles.open('WebStreamer/template/req.html') as r:
             heading = 'Listen {}'.format(file_name)
             tag = mime_type.split('/')[0].strip()
             html = (await r.read()).replace('tag', tag) % (heading, file_name, src)
     else:
-        async with aiofiles.open('Code_X_Mania/template/dl.html') as r:
+        async with aiofiles.open('WebStreamer/template/dl.html') as r:
             async with aiohttp.ClientSession() as s:
                 async with s.get(src) as u:
                     file_size = human_size(u.headers.get('Content-Type'))
