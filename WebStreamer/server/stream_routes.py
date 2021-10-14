@@ -15,7 +15,7 @@ routes = web.RouteTableDef()
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
     return web.json_response({"status": "running",
-                              "maintained_by": "Techie_Sneh",
+                              "maintained_by": "Tellybots_4u",
                               "uptime": get_readable_time(time.time() - StartTime),
                               "telegram_bot": '@'+(await StreamBot.get_me()).username})
 
