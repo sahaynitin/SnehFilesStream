@@ -39,7 +39,6 @@ START_BUTTONS = [
         [InlineKeyboardButton("🚦 Bot Status", url="https://t.me/tellybots_4u")],
         [InlineKeyboardButton("💬 Support Group", url="https://t.me/tellybots_support")],
     ]
-    )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏡 Home', callback_data='home'),
