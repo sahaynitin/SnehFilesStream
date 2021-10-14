@@ -32,13 +32,13 @@ ABOUT_TEXT = """
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('📡 Update Channel', url='https://t.me/tellybots_4u'),
+        [InlineKeyboardButton('📡 Update Channel', url='https://t.me/tellybots_4u')],
         
             InlineKeyboardButton('How to Use ❔', callback_data='help'),
-            InlineKeyboardButton('👲 About', callback_data='about'),
+            InlineKeyboardButton('👲 About', callback_data='about')
         
-        InlineKeyboardButton('🚦 Bot Status', url='https://t.me/tellybots_4u'),
-        InlineKeyboardButton('💬 Support Group', url='https://t.me/tellybots_support')
+        [InlineKeyboardButton('🚦 Bot Status', url='https://t.me/tellybots_4u')],
+        [InlineKeyboardButton('💬 Support Group', url='https://t.me/tellybots_support')]
         ]]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
