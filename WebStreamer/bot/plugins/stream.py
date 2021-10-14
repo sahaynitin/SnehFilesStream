@@ -71,8 +71,8 @@ async def private_receive_handler(c: Client, m: Message):
 
         msg_text ="""
 <b>🔗 Your Link Generated 👇 !</b>\n
-<b>🗃️ File Name :</b> <i>{}</i>\n
-<b>📦 File Size :</b> <i>{}</i>\n
+<b>🗃️ File Name :</b> <b>{}</i>\n
+<b>📦 File Size :</b> <b>{}</i>\n
 <b>📥 Download Now :</b> <b>{}</b>\n
 <b>📝 Nᴏᴛᴇ : Link Will Be Expired in 24 hrs</b>\n
 <b>🎉 By @Tellybots_4u </b>"""
