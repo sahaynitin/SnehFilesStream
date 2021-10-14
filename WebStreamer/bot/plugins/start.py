@@ -31,15 +31,10 @@ ABOUT_TEXT = """
 <b>📦 Last Updated : <a href='https://telegram.me/tellybots_4u'>[ 15-Oct-21 ] 10:00 PM</a></b>"""
 
 START_BUTTONS = InlineKeyboardMarkup(
-        [[
-        [InlineKeyboardButton('📡 Update Channel', url='https://t.me/tellybots_4u')],
-        
-            InlineKeyboardButton('How to Use ❔', callback_data='help'),
-            InlineKeyboardButton('👲 About', callback_data='about')
-        
-        [InlineKeyboardButton('🚦 Bot Status', url='https://t.me/tellybots_4u')],
-        [InlineKeyboardButton('💬 Support Group', url='https://t.me/tellybots_support')]
-        ]]
+                [
+                    [InlineKeyboardButton('📡 Update Channel', url='https://t.me/tellybots_4u'), InlineKeyboardButton('💬 Support Group', url='https://t.me/tellybots_support')],
+                    [InlineKeyboardButton('🚦 Bot Status', url='https://t.me/tellybots_4u'), InlineKeyboardButton('⛔ Close', callback_data='close')]
+                ]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
