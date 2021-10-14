@@ -32,10 +32,7 @@ ABOUT_TEXT = """
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Help ❔', callback_data='help'),
-        InlineKeyboardButton('👲 About', callback_data='about'),
-        InlineKeyboardButton('⛔ Close', callback_data='close')
-        ]]
+        InlineKeyboardButton('📡 Update Channel', url='https://t.me/tellybots_4u)
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
