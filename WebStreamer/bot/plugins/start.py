@@ -17,9 +17,9 @@ START_TEXT = """
 
 HELP_TEXT = """
 <b>✪ Send Me Any File or Media .</b>\n
-<i>✪ I Will Provide You Instant Direct Download link or Stream link!.</i>\n
-<i>✪ Add me in Your Channel as Admin To Get Direct Download link button</i>\n
-<i>✪ Instant Link Generator With Fastest Speed</i>\n
+<b>✪ I Will Provide You Instant Direct Download link or Stream link!.</b>\n
+<b>✪ Add me in Your Channel as Admin To Get Direct Download link button</b>\n
+<b>✪ Instant Link Generator With Fastest Speed</b>\n
 """
 
 ABOUT_TEXT = """
@@ -82,7 +82,7 @@ async def start(b, m):
         await db.add_user(m.from_user.id)
         await b.send_message(
             Var.BIN_CHANNEL,
-            f"**New User Joined:** \n\nMʏ Nᴇᴡ Fʀɪᴇɴᴅ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!"
+            f"**New User Joined:** \n\nMʏ New Freind [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started Your Bᴏt !!"
         )
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "/start":
@@ -100,7 +100,7 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<b>Plz Join my Update Channel to use me 🤖</b>",
+                    text="<b>Please Join my Update Channel To Use Me 🤖</b>",
                     reply_markup=InlineKeyboardMarkup(
                         [[
                             InlineKeyboardButton("Jᴏin Now 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
@@ -142,7 +142,7 @@ async def start(b, m):
                     text="**Please Join my Update Channel to Use me**!\n\n**Due To Overload, Only Channel Subscriber ᴄan Use me**!",
                     reply_markup=InlineKeyboardMarkup(
                         [[
-                          InlineKeyboardButton("🤖 Join Update Channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                          InlineKeyboardButton("🤖 Join My Update Channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                             ]]
                     ),
                     parse_mode="markdown"
@@ -218,7 +218,7 @@ async def help_handler(bot, message):
             if user.status == "kicked":
                 await bot.send_message(
                     chat_id=message.chat.id,
-                    text="<b>Sᴏrry Sir, Yᴏᴜ Are Banned To Use Me. Cᴏɴᴛᴀᴄᴛ Our Support Group</b>",
+                    text="<b>Sᴏrry Sir, Yᴏᴜ Are Banned To Use Me. Contact Our Support Group</b>",
                     parse_mode="HTML",
                     disable_web_page_preview=True
                 )
