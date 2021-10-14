@@ -10,9 +10,9 @@ from pyrogram.errors import UserNotParticipant
 db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
 START_TEXT = """
-<b>Hey, </b>{}\n
-<b>I am Telegram File Streaming bot </b>\n
-<b>✪ `Use Help Command to Know how to Use me`</b>\n
+<b>Hey,</b> {}\n
+<b>I am Telegram File Streaming bot. </b>\n
+<b>✪ Use Help Command to Know how to Use me.</b>\n
 <b><b>✪ Made With 💕 By : </b>@Tellybots_4u</b>"""
 
 HELP_TEXT = """
