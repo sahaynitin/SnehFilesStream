@@ -15,20 +15,34 @@ routes = web.RouteTableDef()
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
     return web.json_response({"status": "running",
-                              "maintained_by": "Tellybots_4u",
+                              "maintained_by": "Adarsh Goel @Codexmania",
                               "uptime": get_readable_time(time.time() - StartTime),
-                              "telegram_bot": '@'+(await StreamBot.get_me()).username})
+                              "Bot was last updated": get_readable_time(time.time()),
+                              "ago":"",
+                              "telegram_bot": '@'+(await StreamBot.get_me()).username,
+                              "Bot Version":"3.0.1"})
 
 
-@routes.get("/{message_id}")
+
+@routes.get("/watch/{message_id}")
 async def stream_handler(request):
+    try:
+        message_id = int(request.match_info['message_id'])
+        return web.Response(text=await render_page(message_id), content_type='text/html')
+    except ValueError as e:
+        logging.error(e)
+        raise web.HTTPNotFound
+        
+@routes.get("/download/{message_id}")
+@routes.get("/{message_id}")
+async def old_stream_handler(request):
     try:
         message_id = int(request.match_info['message_id'])
         return await media_streamer(request, message_id)
     except ValueError as e:
         logging.error(e)
         raise web.HTTPNotFound
-
+        
 
 async def media_streamer(request, message_id: int):
     range_header = request.headers.get('Range', 0)
@@ -74,3 +88,4 @@ async def media_streamer(request, message_id: int):
         return_resp.headers.add("Content-Length", str(file_size))
 
     return return_resp
+
