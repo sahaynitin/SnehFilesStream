@@ -27,7 +27,7 @@ ABOUT_TEXT = """
 <b>🚦 Version : <a href='https://telegram.me/tellybots_4u'>2.0</a></b>\n
 <b>💫 Source Code : <a href='https://t.me/tellybots_digital'>Click Here</a></b>\n
 <b>🗃️ Library : <a href='https://pyrogram.org'>Click Here</a></b>\n
-<b>👲 Developer : <a href='https://telegram.me/tellybots_4u'>Techie Sneh</a></b>\n
+<b>👲 Developer : <a href='https://telegram.me/tellybots_4u'>TellyBots_4u</a></b>\n
 <b>📦 Last Updated : <a href='https://telegram.me/tellybots_4u'>[ 15-Oct-21 ] 10:00 PM</a></b>"""
 
 START_BUTTONS = InlineKeyboardMarkup(
@@ -185,7 +185,7 @@ async def start(b, m):
 <b>📦 File Size :</b> <b>{}</b>\n
 <b>📥 Download link :</b> <b>{}</b>\n
 <b>📝 Note : Link Will Be Expired in 24 hrs</b>\n
-<b>🎉 By  :</i> <b>@Tellybots_4u</b>
+<b>🎉 By  :</b> <b>@Tellybots_4u</b>
 """
 
         await m.reply_text(
