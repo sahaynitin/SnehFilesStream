@@ -173,18 +173,21 @@ async def start(b, m):
         elif get_msg.audio:
             file_name = f"{get_msg.audio.file_name}"
 
-        stream_link = "https://{}/{}".format(Var.FQDN, get_msg.message_id) if Var.ON_HEROKU or Var.NO_PORT else \
-            "http://{}:{}/{}".format(Var.FQDN,
-                                     Var.PORT,
-                                     get_msg.message_id)
+        stream_link = Var.URL + 'watch/' + str(log_msg.message_id)
+        shortlink = get_shortlink(stream_link)
+        if shortlink:
+            stream_link = shortlink
+        online_link = Var.URL + 'download/' + str(log_msg.message_id)
+        shortlinka = get_shortlink(online_link)
+        if shortlinka:
+            online_link = shortlinka
 
         msg_text ="""
 <b>Your Link Generated 👇!</b>\n
 <b>🗃️ File Name :</b> <b>{}</b>\n
 <b>📦 File Size :</b> <b>{}</b>\n
 <b>📥 Download link :</b> <b>{}</b>\n
-<b>📝 Note : Link Will Be Expired in 24 hrs</b>\n
-<b>🎉 By  :</b> <b>@Tellybots_4u</b>
+<b>📺 Watch Online :</b> <b>{}</b> 
 """
 
         await m.reply_text(
